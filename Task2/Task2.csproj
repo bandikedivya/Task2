@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5463BE07-EE6D-43CA-8994-1A8C875BC620}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Task2</RootNamespace>
+    <AssemblyName>Task2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>InterfaceProgram.InterfaceProgram</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1.TenMethodsWithReturnType.cs" />
+    <Compile Include="2.MethodsWithParasAndReturns.cs" />
+    <Compile Include="3.DiffMethodsWithParams.cs" />
+    <Compile Include="4.SingleNamespaceClass.cs" />
+    <Compile Include="5.NamespacesAndSingleClass\AllCustomers.cs" />
+    <Compile Include="5.NamespacesAndSingleClass\Customer1.cs" />
+    <Compile Include="5.NamespacesAndSingleClass\Customer2.cs" />
+    <Compile Include="5.NamespacesAndSingleClass\ToyotaShowroomPrgm.cs" />
+    <Compile Include="6.NamespacesAndClasses\1.AllDeptartments.cs" />
+    <Compile Include="6.NamespacesAndClasses\2.CseDept.cs" />
+    <Compile Include="6.NamespacesAndClasses\3.EceDept.cs" />
+    <Compile Include="6.NamespacesAndClasses\4.EeeDept.cs" />
+    <Compile Include="6.NamespacesAndClasses\4.MechDept.cs" />
+    <Compile Include="6.NamespacesAndClasses\MainProgram.cs" />
+    <Compile Include="7.Inheritance.cs" />
+    <Compile Include="8.InterfaceImplementationByClass.cs" />
+    <Compile Include="10.SingleClassWithDiffInterfaces.cs" />
+    <Compile Include="9.SingleClassDiffInterfaces.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
