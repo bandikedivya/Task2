@@ -57,11 +57,15 @@ namespace MethodOverLoading
 
         static void Main()
         {
+
+
+
+
+            Console.WriteLine("******************Customer1 Order Details**********************");
             Restaurant customer1 = new Restaurant();
             Console.WriteLine(customer1.Customer1rderDetails("Luck", "Biriyani", 550));
 
-            Restaurant customer2 = new Restaurant();
-            Console.WriteLine(customer2.Customer2rderDetails("Martin", "Chicken Tandoori", 675));
+            
 
             Restaurant customer1payment = new Restaurant();
             Console.WriteLine("*****************Customer1 Payment Mode*******************");
@@ -69,33 +73,98 @@ namespace MethodOverLoading
             Console.WriteLine("Select Payment Mode");
             
             Console.WriteLine(customer1payment.Customer1Payment("Luck"));
-            string cash = Console.ReadLine();
-            Console.WriteLine($"{cash} : You Have Selected Pay By Cash Option");
-            Console.WriteLine("Collected Cash, Payment Made Successfully. Thank you..Visit Again");
+            
+            //string cash = Convert.ToString(Console.ReadLine());
+            //string upi = Convert.ToString(Console.ReadLine());
+            //string mblbank = Convert.ToString(Console.ReadLine());
+            string choice = Convert.ToString(Console.ReadLine());
 
-            string upi = Console.ReadLine();
-            Console.WriteLine($"{upi} : You Have Selected UPI ID Option");
-            Console.WriteLine("UPI Payment Made Successfully. Thank you..Visit Again");
+            
 
-            string mblbank = Console.ReadLine();
-            Console.WriteLine($"{mblbank} : You Have Selected Internet Banking Option");
-            Console.WriteLine("Payment Made Successfully. Thank you..Visit Again");
+            if (choice == "1")
+            {
 
+                Console.WriteLine($"{customer1.Cash} : You Have Selected Pay By Cash Option");
+                Console.WriteLine("Collected Cash, Payment Made Successfully. Thank you..Visit Again");
+            }
+            else if (choice == "2")
+            {
+                Console.WriteLine($"{customer1.UPIID} : You Have Selected UPI ID Option");
+                Console.WriteLine("UPI Payment Made Successfully. Thank you..Visit Again");
+            }
+            else if (choice == "3")
+            {
+                Console.WriteLine($"{customer1.BankApp} : You Have Selected Internet Banking Option");
+                Console.WriteLine("Payment Made Successfully. Thank you..Visit Again");
+            }
 
+            else
+            {
+                Console.WriteLine("Invalid Option");
+            }
+
+            Console.WriteLine("******************Customer2 Order Details**********************");
+
+            Restaurant customer2 = new Restaurant();
+            Console.WriteLine(customer2.Customer2rderDetails("Martin", "Chicken Tandoori", 675));
+            
             Console.WriteLine("*****************Customer2 Payment Mode*******************");
             Restaurant customer2payment = new Restaurant();
             Console.WriteLine(customer2payment.Customer2Payment("Martin","1234567890@ybl","Cash", "Imobile Bank App"));
-            string cash1 = Console.ReadLine();
-            Console.WriteLine($"{cash1} : You Have Selected Pay By Cash Option");
-            Console.WriteLine("Collected Cash, Payment Made Successfully. Thank you..Visit Again");
 
-            string upi1 = Console.ReadLine();
-            Console.WriteLine($"{upi1} : You Have Selected UPI ID Option");
-            Console.WriteLine("UPI Payment Made Successfully. Thank you..Visit Again");
 
-            string mblbank1 = Console.ReadLine();
-            Console.WriteLine($"{mblbank1} : You Have Selected Internet Banking Option");
-            Console.WriteLine("Payment Made Successfully. Thank you..Visit Again");
+            string choice1 = Convert.ToString(Console.ReadLine());
+
+
+
+            if (choice1 == "1")
+            {
+
+                Console.WriteLine($"{customer2.Cash} : You Have Selected Pay By Cash Option");
+                Console.WriteLine("Collected Cash, Payment Made Successfully. Thank you..Visit Again");
+            }
+            else if (choice1 == "2")
+            {
+                Console.WriteLine($"{customer2.UPIID} : You Have Selected UPI ID Option");
+                Console.WriteLine("UPI Payment Made Successfully. Thank you..Visit Again");
+            }
+            else if (choice1 == "3")
+            {
+                Console.WriteLine($"{customer2.BankApp} : You Have Selected Internet Banking Option");
+                Console.WriteLine("Payment Made Successfully. Thank you..Visit Again");
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid Option");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //int cash1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine($"{cash1} : You Have Selected Pay By Cash Option");
+            //Console.WriteLine("Collected Cash, Payment Made Successfully. Thank you..Visit Again");
+
+            //int upi1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine($"{upi1} : You Have Selected UPI ID Option");
+            //Console.WriteLine("UPI Payment Made Successfully. Thank you..Visit Again");
+
+            //int mblbank1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine($"{mblbank1} : You Have Selected Internet Banking Option");
+            //Console.WriteLine("Payment Made Successfully. Thank you..Visit Again");
 
         }
 

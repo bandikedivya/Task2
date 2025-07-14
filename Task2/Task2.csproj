@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ComputerEmbroidery.Program</StartupObject>
+    <StartupObject>MethodOverLoading.Restaurant</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
