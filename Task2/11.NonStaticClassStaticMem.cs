@@ -3,13 +3,13 @@
 
 //4 Prepare the example with non-static class and add static members
 
-namespace Library
+namespace MyLibrary
 {
     class BookCollection
     {
-        public string CustomerName {get; set;}
-        public int CustomerId { get; set;}
-        public string BookName { get; set;}
+        public string CustomerName { get; set; }
+        public int CustomerId { get; set; }
+        public string BookName { get; set; }
 
         public BookCollection()
         {
@@ -31,7 +31,7 @@ namespace Library
     {
         public static string ArticleName;
 
-        public static string AuthorName { get; set; }   
+        public static string AuthorName { get; set; }
         public static string AuthorUrl { get; set; }
 
         static ArticleCollection()
@@ -44,7 +44,7 @@ namespace Library
 
         public static string GetArticleDetails()
         {
-           string str = $"Article Details:\nArticle Name: {ArticleName}\nAuthor Name: {AuthorName}\nAuthor Url: {AuthorUrl}";
+            string str = $"Article Details:\nArticle Name: {ArticleName}\nAuthor Name: {AuthorName}\nAuthor Url: {AuthorUrl}";
             return str;
         }
 
@@ -60,11 +60,11 @@ namespace Library
             BookCollection bookCollection = new BookCollection();
             //bookCollection.BookDetails("Sophia", "THE ART OF BEING ALONE", 1001);
             bookCollection.BookDetails();
-         
-            
-            Console.WriteLine( ArticleCollection.GetArticleDetails());
-            
-            
+
+
+            Console.WriteLine(ArticleCollection.GetArticleDetails());
+
+
         }
     }
 }

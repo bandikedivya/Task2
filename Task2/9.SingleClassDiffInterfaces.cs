@@ -57,9 +57,8 @@ namespace InterfaceProgram
         {
             Console.WriteLine("Your Mobile Number +91......6975 is Verified Successfully");
         }
-    }
-    class InterfaceProgram
-    {
+    
+    
         static void Main()
         {
             IGmail Ibgmi = new Bgmi();
@@ -69,10 +68,10 @@ namespace InterfaceProgram
             Ibgmi.verifyMobileNum();
 
             IChrome ichrome = new Bgmi();
-            ichrome.getDetails("email@gmail.com","123456");
+            ichrome.getDetails("ruth@gmail.com","123456");
 
             IFacebook Ifacebook = new Bgmi();
-            Ifacebook.LoginDetails("login@gmail.com","1234567890");
+            Ifacebook.LoginDetails("ruth@gmail.com", "1234567890");
 
 
 

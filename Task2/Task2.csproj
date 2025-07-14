@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>InterfaceProgram.InterfaceProgram</StartupObject>
+    <StartupObject>ComputerEmbroidery.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1.TenMethodsWithReturnType.cs" />
+    <Compile Include="11.NonStaticClassStaticMem.cs" />
+    <Compile Include="12.AbstarctClass.cs" />
+    <Compile Include="13.Polymorphism.cs" />
+    <Compile Include="14.MethodOverloading.cs" />
+    <Compile Include="15.MethodOverriding.cs" />
     <Compile Include="2.MethodsWithParasAndReturns.cs" />
     <Compile Include="3.DiffMethodsWithParams.cs" />
     <Compile Include="4.SingleNamespaceClass.cs" />

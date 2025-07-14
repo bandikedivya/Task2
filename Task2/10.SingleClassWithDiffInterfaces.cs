@@ -7,15 +7,15 @@ namespace EmployeeSystem
 
     //Interface provides the rules(rule can be property or method), but it won't implement
 
-    interface ISuppertTask
-    {
-        string getBonusAmount();
-    }
+    //interface ISuppertTask
+    //{
+    //    string getBonusAmount();
+    //}
 
-    interface IContract
-    {
-        string WorkContarct();
-    }
+    //interface IContract
+    //{
+    //    string WorkContarct();
+    //}
     interface ISoftwareEmployee
     {
         void task();
@@ -28,7 +28,7 @@ namespace EmployeeSystem
     }
 
     //I would like to take the contract of EmployeeSystem
-    class PermanentEmployee : ISoftwareEmployee, ISuppertTask
+    class PermanentEmployee : ISoftwareEmployee
     {
 
         public void GetSalary(double salary)
@@ -53,14 +53,14 @@ namespace EmployeeSystem
         {
             Console.WriteLine("My Location is Banglore");
         }
-
         public string getBonusAmount()
         {
-            return "Bonus Anount is :30000";
+            return "Bonus Amount: 30000";
         }
+       
     }
 
-    class IFreelancer : ISoftwareEmployee, IContract
+    class IFreelancer : ISoftwareEmployee
     {
         public void GetSalary(double salary)
         {
@@ -84,7 +84,6 @@ namespace EmployeeSystem
 
         public string WorkContarct()
         {
-            //Console.WriteLine("Worked on Contract Based");
             return "Worked on Contract Based";
         }
 
@@ -102,14 +101,12 @@ namespace EmployeeSystem
 
             ISoftwareEmployee freelance = new IFreelancer();
             freelance.GetSalary(40000);
-
-            ISuppertTask support = new PermanentEmployee();
-            string str = support.getBonusAmount();
-            Console.WriteLine(str);
-
-            IContract contract = new IFreelancer();
-            string str1 = contract.WorkContarct();
-            Console.WriteLine(str1);
+            
+            PermanentEmployee bonus = new PermanentEmployee();
+            Console.WriteLine(bonus.getBonusAmount());
+            
+            IFreelancer contract = new IFreelancer();
+            Console.WriteLine(contract.WorkContarct());    
 
 
         }
